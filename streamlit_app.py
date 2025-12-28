@@ -836,16 +836,14 @@ with tab3:
 <div style='display: flex; gap: 20px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap;'>
     
     <!-- Backend Card -->
-    <div style='background: linear-gradient(135deg, rgba(40, 116, 240, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); 
-                padding: 20px; border-radius: 15px; border: 2px solid #2874f0; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(40, 116, 240, 0.3);'>
+    <div style='background: linear-gradient(135deg, rgba(40, 116, 240, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); padding: 20px; border-radius: 15px; border: 2px solid #2874f0; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(40, 116, 240, 0.3);'>
         <h2 style='color: #2874f0 !important; margin-bottom: 15px; text-shadow: none;'>Backend</h2>
         <div style='background: rgba(40, 116, 240, 0.1); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #a6c1ee; font-weight: 600;'>Flask API</div>
         <div style='background: rgba(40, 116, 240, 0.1); padding: 8px; border-radius: 8px; color: #a6c1ee; font-weight: 600;'>LangChain</div>
     </div>
 
     <!-- AI Layer Card -->
-    <div style='background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); 
-                padding: 20px; border-radius: 15px; border: 2px solid #2ecc71; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);'>
+    <div style='background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); padding: 20px; border-radius: 15px; border: 2px solid #2ecc71; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);'>
         <h2 style='color: #2ecc71 !important; margin-bottom: 15px; text-shadow: none;'>AI Layer</h2>
         <div style='background: rgba(46, 204, 113, 0.1); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #a8e6cf; font-weight: 600;'>Groq LLM</div>
         <div style='background: rgba(46, 204, 113, 0.1); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #a8e6cf; font-weight: 600;'>HuggingFace</div>
@@ -853,8 +851,7 @@ with tab3:
     </div>
 
     <!-- Database Card -->
-    <div style='background: linear-gradient(135deg, rgba(255, 159, 67, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); 
-                padding: 20px; border-radius: 15px; border: 2px solid #f39c12; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(255, 159, 67, 0.3);'>
+    <div style='background: linear-gradient(135deg, rgba(255, 159, 67, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); padding: 20px; border-radius: 15px; border: 2px solid #f39c12; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(255, 159, 67, 0.3);'>
         <h2 style='color: #f39c12 !important; margin-bottom: 15px; text-shadow: none;'>Database</h2>
         <div style='background: rgba(255, 159, 67, 0.1); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #fad390; font-weight: 600;'>AstraDB</div>
         <div style='background: rgba(255, 159, 67, 0.1); padding: 8px; border-radius: 8px; color: #fad390; font-weight: 600;'>Vector Store</div>
