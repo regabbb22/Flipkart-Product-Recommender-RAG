@@ -77,13 +77,10 @@ graph TD
 ![Tech Stack Banner](tech_stack_banner.png)
 
 ---
-
-## 🚀 Quick Links
-
-- 🌐 **Live Application:** [Launch Streamlit App](https://universal-pdf-rag-chatbot-mhsi4ygebe6hmq3ij6d665.streamlit.app/)
-- 📖 **Documentation:** [View Wiki](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG)
-- 🐛 **Report Issues:** [Issue Tracker](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG)
-- 🐙 **Source Code:** [GitHub Repository](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG)
+## 🌐🎬 Live Demo
+🚀 **Try it now:**
+- **Streamlit Profile** - https://share.streamlit.io/user/ratnesh-181998
+- **Project Demo** - https://tesla-autonomous-car-driving-vision-yolov5-object-detection-an.streamlit.app/
 
 ---
 
@@ -247,7 +244,13 @@ Follow these steps to run the project locally.
 - [ ] **Multi-Modal Output**: Image generation for product visualization.
 
 ---
+### Project Links
 
+- 🌐 **Live Demo**: [Streamlit App](https://agentic-ai-trip-planner-crewai-ykagvec2ng6raotrdaw6sp.streamlit.app/)
+- 📖 **Documentation**: [GitHub Wiki](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG/wiki)
+- 🐛 **Issue Tracker**: [GitHub Issues](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG/discussions)
+---
 ## 📄 License & Contact
 
 **License**: Distributed under the MIT License.
