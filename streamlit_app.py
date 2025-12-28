@@ -477,6 +477,21 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 with tab1:
     st.header("🎬 Live Demo")
 
+    # Direct RAG Chain Initialization (for Streamlit Cloud compatibility)
+    from flipkart.data_ingestion import DataIngestor
+    from flipkart.rag_chain import RAGChainBuilder
+
+    @st.cache_resource
+    def get_rag_chain():
+        """Initialize and cache the RAG chain to improve performance."""
+        try:
+            vector_store = DataIngestor().ingest(load_existing=True)
+            rag_chain = RAGChainBuilder(vector_store).build_chain()
+            return rag_chain
+        except Exception as e:
+            st.error(f"Failed to initialize AI Chain: {str(e)}")
+            return None
+
     # Define a helper function to handle chat queries
     def handle_chat_query(query_text):
         if query_text:
@@ -487,29 +502,31 @@ with tab1:
             })
             add_log(f"User query: {query_text}", "INFO")
             
-            # Call Flask backend
+            # Call RAG Chain locally
             try:
-                with st.spinner("🌸 AI is thinking..."):
-                    response = requests.post(
-                        "http://localhost:5000/get",
-                        data={"msg": query_text},
-                        timeout=30
-                    )
+                with st.spinner("🌸 AI is thinking... (Direct Inference)"):
+                    rag_chain = get_rag_chain()
                     
-                    if response.status_code == 200:
-                        bot_response = response.text
+                    if rag_chain:
+                        response = rag_chain.invoke(
+                            {"input": query_text},
+                            config={"configurable": {"session_id": "streamlit-user"}}
+                        )
+                        
+                        bot_response = response.get("answer", "I couldn't generate a response.")
+                        
                         st.session_state.chat_history.append({
                             'role': 'bot',
                             'content': bot_response
                         })
                         add_log(f"AI response generated successfully", "SUCCESS")
                     else:
-                        st.error(f"Error: {response.status_code}")
-                        add_log(f"Error: HTTP {response.status_code}", "ERROR")
+                        st.error("AI System is not initialized.")
+                        add_log("AI System initialization failed", "ERROR")
+                        
             except Exception as e:
-                st.error(f"⚠️ Error connecting to backend: {str(e)}")
-                st.info("💡 Make sure the Flask app is running on http://localhost:5000")
-                add_log(f"Connection error: {str(e)}", "ERROR")
+                st.error(f"⚠️ Error occurred: {str(e)}")
+                add_log(f"Inference error: {str(e)}", "ERROR")
 
     col1, col2 = st.columns([2, 1])
     
