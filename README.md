@@ -26,33 +26,127 @@ This project demonstrates a complete **End-to-End LLMOps Pipeline**, including d
 
 ---
 
-## 🏗️ Technical Architecture & LLMOps Stack
+## 🏗️ Technical Architecture & Ecosystem
 
-This project is built on a robust, cloud-native **Microservices Architecture**, designed for scalability and real-time inference.
+### 🛠️ Tech Stack Breakdown
+1.  **Groq**: LLM Inference Engine involved.
+2.  **HuggingFace**: Embedding Model provider.
+3.  **GCP VM**: Cloud Virtual Machine for hosting.
+4.  **LangChain**: GenAI Framework for LLM interaction.
+5.  **Minikube**: Local Kubernetes Cluster inside VM.
+6.  **Docker**: Application Containerization.
+7.  **Flask**: Backend API Framework.
+8.  **HTML/CSS**: Frontend UI Technologies.
+9.  **Kubectl**: Kubernetes CLI Tool.
+10. **GitHub**: Source Code Management (SCM).
+11. **AstraDB**: Serverless Online Vector Store.
+12. **Prometheus**: Real-time Metrics Collection.
+13. **Grafana**: Metrics Visualization Dashboard.
 
-### 🤖 Core RAG & AI Layer
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **LLM Inference** | **Groq** (Llama 3.1-8B) | Ultra-low latency inference engine (LPU) for instant generation. |
-| **Embeddings** | **HuggingFace** | `BAAI/bge-base-en-v1.5` for high-fidelity vector representation. |
-| **Vector Database** | **AstraDB** | Serverless Cassandra-based vector store for scalable semantic retrieval. |
-| **Orchestration** | **LangChain** | Manages prompt templates, chains, and retrieval logic. |
+---
 
-### ⚙️ Backend & Application Layer
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **Backend API** | **Flask** | Lightweight REST API to expose RAG endpoints. |
-| **Frontend UI** | **Streamlit** | Interactive, Python-based web interface for chat and dashboards. |
-| **Data Processing** | **Pandas** | Data manipulation and cleaning before ingestion. |
+### 🔹 High-Level Architecture
+**User → UI → Backend → LLM + Vector DB → Response → UI**
 
-### 🐳 Deployment & LLMOps (AIOps)
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **Containerization** | **Docker** | Fully containerized application for consistent environments. |
-| **Orchestration** | **Kubernetes (K8s)** | **Minikube** cluster setup for managing replicas and scaling. |
-| **Observability** | **Prometheus** | Scrapes real-time metrics (latency, request count, error rates). |
-| **Visualization** | **Grafana** | Comprehensive dashboards for system health monitoring. |
-| **Infra as Code** | **YAML** | Declarative configuration for K8s deployments and services. |
+---
+
+### 🧠 Core AI Layer
+
+#### 1. Groq (LLM)
+*   **Role**: Inference engine for ultra-low latency LLM responses.
+*   **Function**: Handles final answer generation after context retrieval.
+*   **Why**: Ideal for real-time GenAI apps.
+
+#### 2. Hugging Face (Embedding Model)
+*   **Role**: Converts text chunks into vector embeddings.
+*   **Usage**:
+    *   **Ingestion**: Documents → Vectors
+    *   **Query Time**: User Query → Vector
+
+#### 3. AstraDB (Vector Store)
+*   **Role**: Online, managed vector database.
+*   **Function**: Stores embeddings & performs semantic similarity search.
+*   **Why**: Cloud-native, Scalable, No infra overhead, Free tier.
+
+---
+
+### 📚 RAG Pipeline
+```mermaid
+graph TD;
+    Documents-->Chunking;
+    Chunking-->Embeddings_HF;
+    Embeddings_HF-->Vector_Store_AstraDB;
+    Vector_Store_AstraDB-->Similarity_Search;
+    Similarity_Search-->Context;
+    Context-->LLM_Groq;
+```
+
+---
+
+### 🔗 Orchestration Layer
+
+#### 4. LangChain
+*   **Role**: The "Glue" connecting LLM, Embeddings, and Vector DB.
+*   **Handles**: Prompt templates, Retrieval logic, Context injection.
+*   **Benefit**: Enables clean RAG workflows.
+
+---
+
+### ⚙️ Backend & Frontend
+
+#### 5. Flask
+*   **Role**: Backend REST API.
+*   **Responsibilities**: Accept queries, Call RAG pipeline, Return response.
+
+#### 6. HTML / CSS / Streamlit
+*   **Role**: Simple Frontend UI.
+*   **Responsibilities**: Send requests to Backend, Display LLM responses.
+
+---
+
+### 🐳 Deployment & Infrastructure
+
+#### 7. Docker
+*   **Role**: Containerizes the application.
+*   **Benefits**: Consistency, Portability, CI/CD compatibility.
+
+#### 8. Minikube
+*   **Role**: Local Kubernetes cluster inside a VM.
+*   **Usage**: Simulating production-grade K8s locally.
+
+#### 9. Kubectl
+*   **Role**: CLI tool for Kubernetes.
+*   **Operations**: Deploy pods, Manage services, Inspect logs, Scale workloads.
+
+#### 10. GCP VM
+*   **Role**: Google Cloud Virtual Machine.
+*   **Usage**: Hosts Minikube, Docker containers, and exposes app publicly.
+
+---
+
+### 📈 Monitoring & Observability (LLMOps)
+
+#### 11. Prometheus
+*   **Role**: Real-time metrics collection.
+*   **Metrics**: CPU/Memory, Latency, API Throughput.
+*   **Source**: Scrapes data from K8s services.
+
+#### 12. Grafana
+*   **Role**: Visualization Dashboard.
+*   **Usage**: Displays Prometheus metrics, System Health, Performance monitoring.
+
+---
+
+### 🔁 DevOps & Collaboration
+
+#### 13. GitHub
+*   **Role**: Source Code Management (SCM).
+*   **Usage**: Version control, Collaboration, CI/CD integration.
+
+---
+
+### 🧩 One-Line Summary
+> "I built a production-style RAG-based GenAI system using **Groq LLM**, **Hugging Face** embeddings, **AstraDB** as a vector store, orchestrated via **LangChain**, containerized with **Docker**, deployed on **Kubernetes** (Minikube on GCP VM), and monitored using **Prometheus** and **Grafana**."
 
 ---
 
