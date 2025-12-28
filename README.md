@@ -41,7 +41,28 @@ A high-level visual guide to the system's design, workflow, and monitoring capab
 ### 🔹 High-Level Architecture
 > *User → UI → Backend → LLM + Vector DB → Response → UI*
 
-![Architecture](https://mermaid.ink/img/pako:eNqVVE1v2zAM_SuEzsmwG_0AHQosW4t22GGH7bCluyDwxEhsZcmQ6KSB4f8-SrZSx06bYQc_Pz-REiVfqaQVSk_sU_1EHzS9M6a6vK4UvTdWj-tO3zS3lX7R-v6h1nrdKq2UbnWrtV6pY6u1frp5uH1-vnl4fPiqnzQdNa3S-vH24etNfX93_1vfNvrxvn54rO9vH54e7mu9q5XWO91cf37SX9Sf3-qHe_2iH2_qXf10_7DeXdX64bHS-vGffvzhQf_Wqn-tX_W6U-Sjs_H1w8P93f1tvW5uPz1c_9Y-1_S19cM34wyIeQ-IowdEPwPiJCAuHhBdD4gzgLh5QHQ8IC4C4uYB0fGAuAuImwdExwPiISBuHhCeB8RjQDw8IDwPiKeAeHhAeB4QzwHx8IDwPCAeA-LhAeF5QDwHxEOGuE6QOEuQZAmSLEGSI_B_lCBxjiBxliDJEqQYggSHEOQAQY4Q5AhBjiDIIQQ5QJAjBDlCkCMIcghBDhDkCEGOEOQIgryHIO8hyHsI8h6C_C9CkBMEOUCQIwQ5QpAjCHIIMi8gyLyAIPMCgswLCPK-gCDzAoLMiwgyLyDIPIMg8wyCzDMIMs8gyDxDkOcM4jKDuMwgLjOIywziMgO5zEAwM5DLDAQzA7nMQC4zkMsMBDMDucxAMDMeT555PHnm8eSZx5NnHk-e-Q95FjFkMUNWMyT6N2S9Q9Z3ZF1H1nTkeUeeceRJR5ZvZHlHFncMeceQbwzpxpBpDFm-Ics3ZPmGLN-Q5RuCzCDIDILMIMgMguwgyA6C7CDIDoLsIMgBgswgyAyCzCDIDoJ8hyDfIci3CPIigrwin3nkM4985pHPvIh85pHPPIvIZx75zCOf_wFw0Y2H)
+```mermaid
+graph TD
+    User([User]) -->|Interacts| UI[Streamlit UI]
+    subgraph "Application Layer"
+        UI -->|HTTP Request| API[Flask Backend]
+        API -->|Orchestrate| Chain[LangChain RAG]
+    end
+    subgraph "Data & AI Layer"
+        Chain -->|Retrieve| VDB[(AstraDB)]
+        Chain -->|Generate| LLM[Groq Llama 3]
+        HF[HuggingFace] -->|Embed| VDB
+    end
+    subgraph "Infrastructure & Observability"
+        Docker[[Docker Container]]
+        K8s{Kubernetes Cluster}
+        Prometheus((Prometheus))
+        Grafana[Grafana Dashboards]
+    end
+    K8s -.-> Docker
+    Prometheus -.->|Monitor| API
+    Grafana -.->|Visualize| Prometheus
+```
 
 ### 🔹 Comprehensive Workflow Integration
 > *Detailed data flow from Ingestion to Generation.*
