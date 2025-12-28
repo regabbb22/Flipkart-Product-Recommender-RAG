@@ -19,10 +19,12 @@ This project demonstrates a complete **End-to-End LLMOps Pipeline**, including d
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Project Links
 
-- **🌐 Streamlit App:** [Click Here to Try](https://universal-pdf-rag-chatbot-mhsi4ygebe6hmq3ij6d665.streamlit.app/)
-- **🐙 GitHub Repository:** [Ratnesh-181998/Flipkart-Product-Recommender-RAG](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG)
+- 🌐 **Live Demo:** [Streamlit App](https://universal-pdf-rag-chatbot-mhsi4ygebe6hmq3ij6d665.streamlit.app/)
+- 📖 **Documentation:** [GitHub Wiki](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG)
+- 🐛 **Issue Tracker:** [GitHub Issues](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG)
+- 🐙 **Repository:** [GitHub](https://github.com/Ratnesh-181998/Flipkart-Product-Recommender-RAG)
 
 ---
 
