@@ -84,6 +84,99 @@ Real-time dashboard for developers.
 
 ---
 
+## 📂 Directory Structure
+
+```plaintext
+Flipkart-Product-Recommender-RAG/
+├── .streamlit/          # Streamlit configuration
+├── data/                # Raw dataset (CSV/JSON)
+├── flipkart/            # Core application logic package
+├── grafana/             # Grafana dashboard configurations
+├── prometheus/          # Prometheus monitoring rules
+├── static/              # CSS styles and images
+├── templates/           # HTML templates for Flask
+├── utils/               # Helper functions (logger, exceptions)
+├── .env.example         # Template for environment variables
+├── .gitignore           # Git ignore rules
+├── Dockerfile           # Docker build configuration
+├── LICENSE              # MIT License
+├── README.md            # Project documentation
+├── app.py               # Flask backend entry point
+├── flask-deployment.yaml# Kubernetes deployment for Flask
+├── requirements.txt     # Python dependencies
+├── setup.py             # Package installation script
+└── streamlit_app.py     # Streamlit frontend entry point
+```
+
+---
+
+## 📸 Visual Gallery
+
+| **Live Chat Interface** | **Architecture Diagram** |
+|:-----------------------:|:------------------------:|
+| ![Chat UI](https://via.placeholder.com/400x200?text=Chat+Interface+Screenshot) | ![Architecture](https://mermaid.ink/img/pako:eNqVVE1v2zAM_SuEzsmwG_0AHQosW4t22GGH7bCluyDwxEhsZcmQ6KSB4f8-SrZSx06bYQc_Pz-REiVfqaQVSk_sU_1EHzS9M6a6vK4UvTdWj-tO3zS3lX7R-v6h1nrdKq2UbnWrtV6pY6u1frp5uH1-vnl4fPiqnzQdNa3S-vH24etNfX93_1vfNvrxvn54rO9vH54e7mu9q5XWO91cf37SX9Sf3-qHe_2iH2_qXf10_7DeXdX64bHS-vGffvzhQf_Wqn-tX_W6U-Sjs_H1w8P93f1tvW5uPz1c_9Y-1_S19cM34wyIeQ-IowdEPwPiJCAuHhBdD4gzgLh5QHQ8IC4C4uYB0fGAuAuImwdExwPiISBuHhCeB8RjQDw8IDwPiKeAeHhAeB4QzwHx8IDwPCAeA-LhAeF5QDwHxEOGuE6QOEuQZAmSLEGSI_B_lCBxjiBxliDJEqQYggSHEOQAQY4Q5AhBjiDIIQQ5QJAjBDlCkCMIcghBDhDkCEGOEOQIgryHIO8hyHsI8h6C_C9CkBMEOUCQIwQ5QpAjCHIIMi8gyLyAIPMCgswLCPK-gCDzAoLMiwgyLyDIPIMg8wyCzDMIMs8gyDxDkOcM4jKDuMwgLjOIywziMgO5zEAwM5DLDAQzA7nMQC4zkMsMBDMDucxAMDMeT555PHnm8eSZx5NnHk-e-Q95FjFkMUNWMyT6N2S9Q9Z3ZF1H1nTkeUeeceRJR5ZvZHlHFncMeceQbwzpxpBpDFm-Ics3ZPmGLN-Q5RuCzCDIDILMIMgMguwgyA6C7CDIDoLsIMgBgswgyAyCzCDIDoJ8hyDfIci3CPIigrwin3nkM4985pHPvIh85pHPPIvIZx75zCOf_wFw0Y2H) |
+| *Real-time RAG Chat* | *Microservices Flow* |
+
+| **Tech Stack Visualization** | **System Logs Dashboard** |
+|:----------------------------:|:-------------------------:|
+| ![Tech Stack](https://via.placeholder.com/400x200?text=Tech+Stack+Tab) | ![Logs](https://via.placeholder.com/400x200?text=System+Logs+Tab) |
+| *Component Breakdown* | *Live Health Monitoring* |
+
+---
+
+## 🔄 Detailed Workflow
+
+1.  **Ingestion Layer**:
+    *   Raw product reviews (CSV) are loaded using `langchain_community.document_loaders`.
+    *   Text is chunked into manageable tokens using `RecursiveCharacterTextSplitter`.
+2.  **Embedding Layer**:
+    *   Chunks are passed through the `HuggingFaceEmbeddings` model (`BAAI/bge-base-en-v1.5`).
+    *   Dense vector representations are generated.
+3.  **Storage Layer**:
+    *   Vectors are upserted into **AstraDB**, a serverless vector database built on Apache Cassandra.
+4.  **Retrieval Layer**:
+    *   User query is embedded on-the-fly.
+    *   A semantic similarity search finds the top-k most relevant review chunks.
+5.  **Generation Layer**:
+    *   Retrieved chunks + User Query + Prompt Template are sent to **Groq**.
+    *   **Llama 3.1** generates a human-like, context-aware response.
+
+---
+
+## 🔮 Future Roadmap
+
+- [ ] **CI/CD Pipeline**: Automate testing and deployment using GitHub Actions.
+- [ ] **User Auth**: Add login functionality to save user chat history.
+- [ ] **Voice Support**: Enable voice-to-text for audio queries.
+- [ ] **Multi-Modal**: Support image search for products.
+- [ ] **A/B Testing**: Compare different LLM models (e.g., Mistral vs Llama 3).
+
+---
+
+## ❓ Troubleshooting
+
+**Q: Why is the response taking too long?**
+*A: Ensure you are using a valid Groq API key. Local internet connection speed can also affect AstraDB retrieval.*
+
+**Q: 'Module not found' error?**
+*A: Run `pip install -r requirements.txt` again in your virtual environment.*
+
+**Q: Images not loading?**
+*A: Check the `static/` folder to ensure all assets are present and paths are correct.*
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+1.  Fork the repository.
+2.  Create a feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+---
+
 ## 🛠️ Local Installation
 
 ### Prerequisites
