@@ -1,4 +1,4 @@
-# 🛒 GenAI RAG Product Recommender
+# 🛒 Agentic AI | GenAI RAG Product Recommender
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://universal-pdf-rag-chatbot-mhsi4ygebe6hmq3ij6d665.streamlit.app/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/release/python-390/)
