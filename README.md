@@ -226,7 +226,7 @@ Flipkart-Product-Recommender-RAG/
 
 ### 3️⃣ Tech Stack Visualization
 > *Comprehensive Technology Workflow*
-![Tech Stack](workflow_diagram.png)
+![Tech Stack](tech_stack_banner.png)
 
 ### 4️⃣ System Logs Dashboard
 > *Live Health Monitoring & LLMOps*
