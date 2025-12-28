@@ -842,10 +842,10 @@ with tab3:
 </div>
 <!-- AI Layer Card -->
 <div style='background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); padding: 20px; border-radius: 15px; border: 2px solid #2ecc71; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);'>
-<h2 style='color: #2ecc71 !important; margin-bottom: 15px; text-shadow: none;'>AI Layer</h2>
-<div style='background: rgba(46, 204, 113, 0.1); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #a8e6cf; font-weight: 600;'>Groq LLM</div>
-<div style='background: rgba(46, 204, 113, 0.1); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #a8e6cf; font-weight: 600;'>HuggingFace</div>
-<div style='background: rgba(46, 204, 113, 0.1); padding: 8px; border-radius: 8px; color: #a8e6cf; font-weight: 600;'>Embeddings</div>
+<h2 style='color: #ffffff !important; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.5);'>AI Layer</h2>
+<div style='background: rgba(46, 204, 113, 0.2); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #ffffff; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.5);'>Groq LLM</div>
+<div style='background: rgba(46, 204, 113, 0.2); padding: 8px; border-radius: 8px; margin-bottom: 8px; color: #ffffff; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.5);'>HuggingFace</div>
+<div style='background: rgba(46, 204, 113, 0.2); padding: 8px; border-radius: 8px; color: #ffffff; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.5);'>Embeddings</div>
 </div>
 <!-- Database Card -->
 <div style='background: linear-gradient(135deg, rgba(255, 159, 67, 0.2) 0%, rgba(26, 31, 46, 0.8) 100%); padding: 20px; border-radius: 15px; border: 2px solid #f39c12; width: 30%; min-width: 250px; text-align: center; box-shadow: 0 4px 15px rgba(255, 159, 67, 0.3);'>
