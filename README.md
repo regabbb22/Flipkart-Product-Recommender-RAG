@@ -1,11 +1,12 @@
 # 🛒 Agentic AI | GenAI RAG Product Recommender
-<img width="940" height="499" alt="image" src="https://github.com/user-attachments/assets/b987b30f-0683-4ffc-96a8-ec48a180d4da" />
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://universal-pdf-rag-chatbot-mhsi4ygebe6hmq3ij6d665.streamlit.app/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+
+<img width="940" height="499" alt="image" src="https://github.com/user-attachments/assets/b987b30f-0683-4ffc-96a8-ec48a180d4da" />
 
 > **A Production-Grade E-commerce Recommendation System built with RAG Architecture, Groq Llama 3, LangChain, and AstraDB.** 
 > *Deployed on Kubernetes with Prometheus/Grafana O11y.*
