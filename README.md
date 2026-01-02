@@ -291,3 +291,17 @@ Follow these steps to run the project locally.
 **Author**: **RATNESH KUMAR SINGH**  
 *Data Scientist (AI/ML)*  
 - 📧 [Email](mailto:rattudacsit2021gate@gmail.com) | 💼 [LinkedIn](https://www.linkedin.com/in/ratneshkumar1998/) | 🐙 [GitHub](https://github.com/Ratnesh-181998)
+
+  ---
+*Built with passion for the AI Community. 🚀*
+
+</div>
+
+---
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%">
+  
+</div>
+
+
