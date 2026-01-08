@@ -83,6 +83,13 @@ graph TD
 🚀 **Try it now:**
 - **Streamlit Profile** - https://share.streamlit.io/user/ratnesh-181998
 - **Project Demo** - https://flipkart-appuct-recommender-rag-qpisu9s2oo4dyjr3fpp4yf.streamlit.app/
+  
+---
+
+### 🎬 Live Project Demo
+> Experience the full flow:
+
+![Project Demo Walkthrough](Combined_Walkthrough.gif)
 
 ---
 
